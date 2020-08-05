@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using WebApplication4.CustomErrors;
 
 namespace WebApplication4
 {
@@ -8,6 +9,7 @@ namespace WebApplication4
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new CustomErrorHandlerAttribute());
         }
     }
 }
